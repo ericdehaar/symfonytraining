@@ -78,31 +78,31 @@ class ProductController extends AbstractController
         return $this->render('product/cart.html.twig', ['cart' =>  $cartArray, 'totaal' => $totaal]);
     }
 
-    /**
-     * @Route("/afrekenen", name="product_afrekenen", methods={"GET"})
-     */
-    public function afrekenen(Request $request, \Swift_Mailer $mailer): Response
-    {
-//        $form = $this->createForm(ContactType::class);
-//
-//        $form->handleRequest($request);
-//
-//        if ($form->isSubmitted() && $form->isValid()){
-//            $contactFormData = $form->getData();
-//            dump($contactFormData);
-//        }
-//
-//        $message = (new \Swift_Message('Afrekenen'))
-//            ->setFrom($contactFormData['email'])
-//            ->setTo('a2998a2da9-42e5ae@inbox.mailtrap.io')
-//            ->setBody(
-//                $contactFormData['message'],
-//                'text/plain'
-//            );
-//        $mailer->send($message);
-        return $this->render('product/afrekenen.html.twig');
-//            'our_form'=> $form->createView()]);
-    }
+//    /**
+//     * @Route("/afrekenen", name="product_afrekenen", methods={"GET"})
+//     */
+//    public function afrekenen(Request $request, \Swift_Mailer $mailer): Response
+//    {
+////        $form = $this->createForm(ContactType::class);
+////
+////        $form->handleRequest($request);
+////
+////        if ($form->isSubmitted() && $form->isValid()){
+////            $contactFormData = $form->getData();
+////            dump($contactFormData);
+////        }
+////
+////        $message = (new \Swift_Message('Afrekenen'))
+////            ->setFrom($contactFormData['email'])
+////            ->setTo('a2998a2da9-42e5ae@inbox.mailtrap.io')
+////            ->setBody(
+////                $contactFormData['message'],
+////                'text/plain'
+////            );
+////        $mailer->send($message);
+//        return $this->render('product/afrekenen.html.twig');
+////            'our_form'=> $form->createView()]);
+//    }
 
 
     /**

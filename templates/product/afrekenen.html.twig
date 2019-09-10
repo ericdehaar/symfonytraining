@@ -1,11 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Afrekenen{% endblock %}
+{% block title %}Our Contact Form{% endblock title %}
 
 {% block body %}
 
-
-
-
-    <a href="{{ path('product_index') }}">Terug naar vorige pagina</a><br>
+    <div>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    </div>
+{#    <a href="{{ path('product_index') }}">Terug naar vorige pagina</a>#}
 {% endblock %}
