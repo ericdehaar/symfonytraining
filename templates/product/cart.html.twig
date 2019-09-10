@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Winkelmand{% endblock %}
+
+{% block body %}
+
+    <h1>Winkelmand</h1>
+    <table>
+    <thead>
+    <tr>
+        <th>Product</th>
+        <th>Naam</th>
+        <th>Prijs</th>
+        <th>Aantal</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    {% for item in cart %}
+        <tr>
+            <td>{{ item[0] }}</td>
+            <td>{{ item[2].getNaam }}</td>
+            <td>{{ item[2].getPrijs * item[1] }}</td>
+            <td>{{ item[1] }}</td>
+
+        </tr>
+    {% endfor %}
+    <th>Totaal</th>
+    <td>{{ totaal }}</td>
+
+    </tbody>
+
+    <a href="{{ path('product_index') }}">Terug naar vorige pagina</a><br>
+    <a href="{{ path('product_afrekenen') }}">Afrekenen</a>
+{% endblock %}
